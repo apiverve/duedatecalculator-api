@@ -1,0 +1,102 @@
+openapi: 3.0.4
+info:
+  title: Due Date Calculator
+  description: Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/duedatecalculator:
+    get:
+      summary: Calculate Due Date
+      description: Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.
+      operationId: duedatecalculator
+      parameters:
+      - name: method
+        default: last_period
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Calculation method (last_period or conception_date)
+        example: last_period
+      - name: last_period
+        in: query
+        schema:
+          type: string
+        required: false
+        description: First day of last period (YYYY-MM-DD) - for last_period method
+        example: 2024-01-01
+      - name: conception_date
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Conception date (YYYY-MM-DD) - for conception_date method
+        example: 2024-01-15
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  calculation_method: last_period
+                  last_period_date: 2024-01-01
+                  estimated_conception_date: 2024-01-15
+                  due_date: 2024-10-07
+                  current_progress:
+                    days_pregnant: 688
+                    weeks_pregnant: 98
+                    days_into_week: 2
+                    formatted: 98 weeks, 2 days
+                    trimester: 3
+                    percentage_complete: 245.71
+                  time_until_due:
+                    days: 0
+                    weeks: 0
+                    days_extra: 0
+                    formatted: Past due date
+                    is_overdue: true
+                  upcoming_milestones: []
+                  important_dates:
+                    end_first_trimester: 2024-04-01
+                    end_second_trimester: 2024-07-08
+                    full_term_begins: 2024-09-16
+                  disclaimer: This is an estimate only. Due dates can vary. Consult your healthcare provider for medical advice.
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
