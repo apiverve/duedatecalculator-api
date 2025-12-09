@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/duedatecalculator",
+  "version": "1.1.12",
+  "description": "Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/duedatecalculator-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "due date calculator", "pregnancy calculator", "conception date", "pregnancy weeks", "trimester calculator"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/duedatecalculator-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/duedatecalculator?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
