@@ -12,14 +12,8 @@ public class BasicExample {
         DueDateCalculatorAPIClient client = new DueDateCalculatorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Query parameters
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;method&quot;, &quot;last_period&quot;);
-        parameters.put(&quot;last_period&quot;, &quot;2024-01-01&quot;);
-        parameters.put(&quot;conception_date&quot;, &quot;2024-01-15&quot;);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
