@@ -15,9 +15,7 @@ const api = new duedatecalculatorAPI({
 
 // Example query
 var query = {
-  method: "last_period",
-  last_period: "2024-01-01",
-  conception_date: "2024-01-15"
+  last_period: "2024-01-01"
 };
 
 // Make the API request using callback
