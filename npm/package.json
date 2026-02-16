@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/duedatecalculator",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.",
   "main": "index.js",
   "types": "index.d.ts",
