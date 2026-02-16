@@ -241,8 +241,9 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient
 
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]")
 
+query = { "last_period": "2024-01-01" }
+
 try:
-    query = { "last_period": "2024-01-01" }
     result = api.execute(query)
     print(result)
 finally:
