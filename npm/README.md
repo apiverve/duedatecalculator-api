@@ -60,7 +60,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  last_period: "2024-01-01"
+  last_period: "2025-06-01"
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +80,7 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  last_period: "2024-01-01"
+  last_period: "2025-06-01"
 };
 
 api.execute(query)
@@ -101,7 +101,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  last_period: "2024-01-01"
+  last_period: "2025-06-01"
 };
 
     try {
@@ -127,12 +127,12 @@ async function makeRequest() {
     "estimated_conception_date": "2024-01-15",
     "due_date": "2024-10-07",
     "current_progress": {
-      "days_pregnant": 688,
-      "weeks_pregnant": 98,
-      "days_into_week": 2,
-      "formatted": "98 weeks, 2 days",
+      "days_pregnant": 715,
+      "weeks_pregnant": 102,
+      "days_into_week": 1,
+      "formatted": "102 weeks, 1 days",
       "trimester": 3,
-      "percentage_complete": 245.71
+      "percentage_complete": 255.36
     },
     "time_until_due": {
       "days": 0,
