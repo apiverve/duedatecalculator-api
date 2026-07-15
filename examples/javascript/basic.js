@@ -13,7 +13,12 @@ const API_URL = 'https://api.apiverve.com/v1/duedatecalculator';
  */
 async function callDueDateCalculatorAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            last_period: &#x27;2025-06-01&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
