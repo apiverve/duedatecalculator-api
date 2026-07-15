@@ -15,7 +15,7 @@ const api = new duedatecalculatorAPI({
 
 // Example query
 var query = {
-  last_period: "2024-01-01"
+  last_period: "2025-06-01"
 };
 
 // Make the API request using callback
