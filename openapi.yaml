@@ -29,7 +29,7 @@ paths:
             type: string
           required: true
           description: First day of last menstrual period (YYYY-MM-DD)
-          example: '2024-01-01'
+          example: '2025-06-01'
       responses:
         '200':
           description: Successful Response
