@@ -4,47 +4,59 @@ declare module '@apiverve/duedatecalculator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface duedatecalculatorResponse {
     status: string;
     error: string | null;
     data: DueDateCalculatorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface DueDateCalculatorData {
-      calculationMethod:       string;
-      lastPeriodDate:          Date;
-      estimatedConceptionDate: Date;
-      dueDate:                 Date;
+      calculationMethod:       null | string;
+      lastPeriodDate:          Date | null;
+      estimatedConceptionDate: Date | null;
+      dueDate:                 Date | null;
       currentProgress:         CurrentProgress;
       timeUntilDue:            TimeUntilDue;
       upcomingMilestones:      any[];
       importantDates:          ImportantDates;
-      disclaimer:              string;
+      disclaimer:              null | string;
   }
   
   interface CurrentProgress {
-      daysPregnant:       number;
-      weeksPregnant:      number;
-      daysIntoWeek:       number;
-      formatted:          string;
-      trimester:          number;
-      percentageComplete: number;
+      daysPregnant:       number | null;
+      weeksPregnant:      number | null;
+      daysIntoWeek:       number | null;
+      formatted:          null | string;
+      trimester:          number | null;
+      percentageComplete: number | null;
   }
   
   interface ImportantDates {
-      endFirstTrimester:  Date;
-      endSecondTrimester: Date;
-      fullTermBegins:     Date;
+      endFirstTrimester:  Date | null;
+      endSecondTrimester: Date | null;
+      fullTermBegins:     Date | null;
   }
   
   interface TimeUntilDue {
-      days:      number;
-      weeks:     number;
-      daysExtra: number;
-      formatted: string;
-      isOverdue: boolean;
+      days:      number | null;
+      weeks:     number | null;
+      daysExtra: number | null;
+      formatted: null | string;
+      isOverdue: boolean | null;
   }
 
   export default class duedatecalculatorWrapper {
