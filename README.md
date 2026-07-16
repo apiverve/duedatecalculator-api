@@ -191,11 +191,53 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Due Date Calculator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "calculation_method": "last_period",
+    "last_period_date": "2024-01-01",
+    "estimated_conception_date": "2024-01-15",
+    "due_date": "2024-10-07",
+    "current_progress": {
+      "days_pregnant": 715,
+      "weeks_pregnant": 102,
+      "days_into_week": 1,
+      "formatted": "102 weeks, 1 days",
+      "trimester": 3,
+      "percentage_complete": 255.36
+    },
+    "time_until_due": {
+      "days": 0,
+      "weeks": 0,
+      "days_extra": 0,
+      "formatted": "Past due date",
+      "is_overdue": true
+    },
+    "upcoming_milestones": [],
+    "important_dates": {
+      "end_first_trimester": "2024-04-01",
+      "end_second_trimester": "2024-07-08",
+      "full_term_begins": "2024-09-16"
+    },
+    "disclaimer": "This is an estimate only. Due dates can vary. Consult your healthcare provider for medical advice."
+  }
 }
 ```
 
