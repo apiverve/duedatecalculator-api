@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/duedatecalculator",
+    "description": "Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "duedatecalculator",
+        "due date calculator",
+        "pregnancy calculator",
+        "conception date",
+        "pregnancy weeks",
+        "trimester calculator"
+    ],
+    "homepage": "https://apiverve.com/marketplace/duedatecalculator?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/duedatecalculator",
+        "source": "https://github.com/apiverve/duedatecalculator-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Duedatecalculator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Duedatecalculator\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
