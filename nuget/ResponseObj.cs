@@ -25,6 +25,9 @@ namespace APIVerve.API.DueDateCalculator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,13 +36,13 @@ namespace APIVerve.API.DueDateCalculator
         public string CalculationMethod { get; set; }
 
         [JsonProperty("last_period_date")]
-        public DateTimeOffset LastPeriodDate { get; set; }
+        public DateTimeOffset? LastPeriodDate { get; set; }
 
         [JsonProperty("estimated_conception_date")]
-        public DateTimeOffset EstimatedConceptionDate { get; set; }
+        public DateTimeOffset? EstimatedConceptionDate { get; set; }
 
         [JsonProperty("due_date")]
-        public DateTimeOffset DueDate { get; set; }
+        public DateTimeOffset? DueDate { get; set; }
 
         [JsonProperty("current_progress")]
         public CurrentProgress CurrentProgress { get; set; }
@@ -60,51 +63,63 @@ namespace APIVerve.API.DueDateCalculator
     public partial class CurrentProgress
     {
         [JsonProperty("days_pregnant")]
-        public long DaysPregnant { get; set; }
+        public long? DaysPregnant { get; set; }
 
         [JsonProperty("weeks_pregnant")]
-        public long WeeksPregnant { get; set; }
+        public long? WeeksPregnant { get; set; }
 
         [JsonProperty("days_into_week")]
-        public long DaysIntoWeek { get; set; }
+        public long? DaysIntoWeek { get; set; }
 
         [JsonProperty("formatted")]
         public string Formatted { get; set; }
 
         [JsonProperty("trimester")]
-        public long Trimester { get; set; }
+        public long? Trimester { get; set; }
 
         [JsonProperty("percentage_complete")]
-        public double PercentageComplete { get; set; }
+        public double? PercentageComplete { get; set; }
     }
 
     public partial class ImportantDates
     {
         [JsonProperty("end_first_trimester")]
-        public DateTimeOffset EndFirstTrimester { get; set; }
+        public DateTimeOffset? EndFirstTrimester { get; set; }
 
         [JsonProperty("end_second_trimester")]
-        public DateTimeOffset EndSecondTrimester { get; set; }
+        public DateTimeOffset? EndSecondTrimester { get; set; }
 
         [JsonProperty("full_term_begins")]
-        public DateTimeOffset FullTermBegins { get; set; }
+        public DateTimeOffset? FullTermBegins { get; set; }
     }
 
     public partial class TimeUntilDue
     {
         [JsonProperty("days")]
-        public long Days { get; set; }
+        public long? Days { get; set; }
 
         [JsonProperty("weeks")]
-        public long Weeks { get; set; }
+        public long? Weeks { get; set; }
 
         [JsonProperty("days_extra")]
-        public long DaysExtra { get; set; }
+        public long? DaysExtra { get; set; }
 
         [JsonProperty("formatted")]
         public string Formatted { get; set; }
 
         [JsonProperty("is_overdue")]
-        public bool IsOverdue { get; set; }
+        public bool? IsOverdue { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
