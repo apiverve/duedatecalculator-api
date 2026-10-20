@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/duedatecalculator:
     get:
-      summary: Calculate from Last Period
+      summary: Due Date Calculator
       description: Calculate pregnancy due date from first day of last menstrual period
       operationId: duedatecalculator
       parameters:
