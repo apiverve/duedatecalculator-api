@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Due Date Calculator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [lastPeriod] (required) - First day of last menstrual period (YYYY-MM-DD) [format: date]

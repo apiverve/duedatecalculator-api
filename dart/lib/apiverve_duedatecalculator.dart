@@ -2,7 +2,7 @@
 ///
 /// Due Date Calculator estimates pregnancy due dates using either last menstrual period or conception date, providing comprehensive pregnancy timeline information.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=referral&utm_content=readme
 library apiverve_duedatecalculator;
 
 export 'src/client.dart';

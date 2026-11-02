@@ -5,7 +5,7 @@ Due Date Calculator estimates pregnancy due dates using either last menstrual pe
 [![pub package](https://img.shields.io/pub/v/apiverve_duedatecalculator.svg)](https://pub.dev/packages/apiverve_duedatecalculator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Due Date Calculator API](https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Due Date Calculator API](https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_duedatecalculator: ^1.1.14
+  apiverve_duedatecalculator: ^1.2.4
 ```
 
 Then run:
@@ -34,7 +34,7 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'last_period': '2024-01-01'
+      'last_period': '2025-06-01'
     });
 
     print('Status: ${response.status}');
@@ -57,12 +57,12 @@ void main() async {
     "estimated_conception_date": "2024-01-15",
     "due_date": "2024-10-07",
     "current_progress": {
-      "days_pregnant": 688,
-      "weeks_pregnant": 98,
-      "days_into_week": 2,
-      "formatted": "98 weeks, 2 days",
+      "days_pregnant": 715,
+      "weeks_pregnant": 102,
+      "days_into_week": 1,
+      "formatted": "102 weeks, 1 days",
       "trimester": 3,
-      "percentage_complete": 245.71
+      "percentage_complete": 255.36
     },
     "time_until_due": {
       "days": 0,
@@ -84,12 +84,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Due Date Calculator API](https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/duedatecalculator](https://docs.apiverve.com/ref/duedatecalculator?utm_source=dart&utm_medium=readme)
+- **API Home:** [Due Date Calculator API](https://apiverve.com/marketplace/duedatecalculator?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/duedatecalculator](https://docs.apiverve.com/ref/duedatecalculator?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -97,4 +97,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
