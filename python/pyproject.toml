@@ -1,6 +1,6 @@
 [project]
 name = "apiverve-duedatecalculator"
-version = "1.2.2"
+version = "1.2.4"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
