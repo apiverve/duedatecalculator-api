@@ -15,7 +15,7 @@ async function callDueDateCalculatorAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            last_period: &#x27;2025-06-01&#x27;
+            last_period: &#x27;2026-06-01&#x27;
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

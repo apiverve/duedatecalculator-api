@@ -18,7 +18,7 @@ def call_duedatecalculator_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;last_period&#x27;: &#x27;2025-06-01&#x27;}
+        params &#x3D; {&#x27;last_period&#x27;: &#x27;2026-06-01&#x27;}
 
         headers = {
             'x-api-key': API_KEY

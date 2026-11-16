@@ -31,7 +31,7 @@ The Due Date Calculator API provides a simple, reliable way to integrate due dat
 async function callDueDateCalculatorAPI() {
     try {
         const params = new URLSearchParams({
-            last_period: '2025-06-01'
+            last_period: '2026-06-01'
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/duedatecalculator?${params}`, {
@@ -54,7 +54,7 @@ callDueDateCalculatorAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/duedatecalculator?last_period=2025-06-01" \
+curl -X GET "https://api.apiverve.com/v1/duedatecalculator?last_period=2026-06-01" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
