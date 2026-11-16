@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Duedatecalculator::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ last_period: "2025-06-01" })
+    #   response = client.execute({ last_period: "2026-06-01" })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/duedatecalculator?utm_source=ruby&utm_medium=referral&utm_content=readme

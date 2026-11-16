@@ -35,7 +35,7 @@ require 'apiverve_duedatecalculator'
 client = APIVerve::Duedatecalculator::Client.new(api_key: "YOUR_API_KEY")
 
 # Make a request
-response = client.execute({ last_period: "2025-06-01" })
+response = client.execute({ last_period: "2026-06-01" })
 
 # Print the response
 puts response
@@ -46,7 +46,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ last_period: "2025-06-01" })
+  response = client.execute({ last_period: "2026-06-01" })
   puts response["data"]
 rescue APIVerve::Duedatecalculator::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
