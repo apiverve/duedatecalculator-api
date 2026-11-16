@@ -43,7 +43,7 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient
 # Initialize the client with your APIVerve API key
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]")
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 try:
     # Make the API call
@@ -81,7 +81,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 ```
 
 ###### Simple Request
@@ -144,7 +144,7 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient, Due
 
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]")
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 try:
     result = api.execute(query)
@@ -165,7 +165,7 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient, Due
 
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]")
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 try:
     result = api.execute(query)
@@ -199,7 +199,7 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient, DuedatecalculatorAPIClientError
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 # Using context manager ensures proper cleanup
 with DuedatecalculatorAPIClient("[YOUR_API_KEY]") as api:
@@ -225,7 +225,7 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient
 # Enable debug mode
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -240,7 +240,7 @@ from apiverve_duedatecalculator.apiClient import DuedatecalculatorAPIClient
 
 api = DuedatecalculatorAPIClient("[YOUR_API_KEY]")
 
-query = { "last_period": "2025-06-01" }
+query = { "last_period": "2026-06-01" }
 
 try:
     result = api.execute(query)
