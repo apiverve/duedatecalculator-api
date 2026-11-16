@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_duedatecalculator: ^1.2.5
+  apiverve_duedatecalculator: ^1.2.6
 ```
 
 Then run:
@@ -34,7 +34,7 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'last_period': '2025-06-01'
+      'last_period': '2026-06-01'
     });
 
     print('Status: ${response.status}');
