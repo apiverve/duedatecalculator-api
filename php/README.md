@@ -27,7 +27,7 @@ use APIVerve\Duedatecalculator\Client;
 $client = new Client('YOUR_API_KEY');
 
 // Make a request
-$response = $client->execute(['last_period' => '2025-06-01']);
+$response = $client->execute(['last_period' => '2026-06-01']);
 
 // Print the response
 print_r($response);
@@ -42,7 +42,7 @@ use APIVerve\Duedatecalculator\Exceptions\APIException;
 use APIVerve\Duedatecalculator\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['last_period' => '2025-06-01']);
+    $response = $client->execute(['last_period' => '2026-06-01']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
