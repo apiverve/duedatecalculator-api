@@ -57,7 +57,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  last_period: "2025-06-01"
+  last_period: "2026-06-01"
 };
 
 api.execute(query, function (error, data) {
@@ -77,7 +77,7 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  last_period: "2025-06-01"
+  last_period: "2026-06-01"
 };
 
 api.execute(query)
@@ -98,7 +98,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  last_period: "2025-06-01"
+  last_period: "2026-06-01"
 };
 
     try {
